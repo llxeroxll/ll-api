@@ -22,14 +22,14 @@ public class SwaggerConfig{
      @Bean
      public Docket productApi() {
 
-    	 return new Docket(DocumentationType.SWAGGER_2).select().apis(RequestHandlerSelectors.basePackage("br.com.llapi")).paths(regex("/v1.*")).build()
+    	 return new Docket(DocumentationType.SWAGGER_2).select().apis(RequestHandlerSelectors.basePackage("br.com.llapi")).paths(regex("api.*")).build()
                  .apiInfo(metaInfo());
           
      }
 
      private ApiInfo metaInfo() {
 
-          ApiInfo apiInfo = new ApiInfo("API - Desafio LL", "", "0.0.0.0.0.0.0.1", "Terms of Service",
+          ApiInfo apiInfo = new ApiInfo("API - Desafio LL", "", "0.0.1", "Terms of Service",
                     new Contact("xerox", "", ""), "Apache License Version 2.0",
                     "https://www.apache.org/licesen.html", new ArrayList<VendorExtension>());
 
