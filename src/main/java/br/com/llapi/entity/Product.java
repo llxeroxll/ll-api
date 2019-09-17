@@ -6,18 +6,21 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 
 @Entity
 @Getter
 @Setter
+@ToString
+@EqualsAndHashCode
 public class Product {
 	
 	@Id
-	@Column(nullable = false, unique = true)
-    private long id;
+    private String id;
     
     @Column(nullable = false)
     private String title;
